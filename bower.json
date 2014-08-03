@@ -1,11 +1,10 @@
 {
   "name": "system-md-m",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "The Kid Frankenstein Threw in a Pond"
   ],
   "license": "MIT",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
