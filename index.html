@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <title>system-md-m</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+  <div id="content"></div>
+</div>
+<script src="bower_components/es6-module-loader/dist/es6-module-loader.js"></script>
+<script src="bower_components/system.js/dist/system.js"></script>
+<script>
+  System.paths["marked"] = 'bower_components/marked/lib/marked.js';
+  System.paths["mithril"] = 'bower_components/mithril/mithril.js';
+
+  System.meta["mithril"] = {
+    format: "global"
+  };
+
+  System.import('sample.md!').then(function(comp) {
+      System.import('mithril').then(function(m) {
+        m.render(document.getElementById('content'), [
+          comp()
+        ]);
+      });
+  }, function(err){
+    setTimeout(function() {
+      throw err;
+    });
+  });
+</script>
+</body>
+</html>

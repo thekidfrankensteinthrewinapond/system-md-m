@@ -1,0 +1,25 @@
+{
+  "name": "system-md-m",
+  "version": "0.0.1",
+  "authors": [
+    "The Kid Frankenstein Threw in a Pond"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "marked": "~0.3.2",
+    "mithril": "~0.1.19"
+  },
+  "devDependencies": {
+    "system.js": "~0.6.7",
+    "es6-module-loader": "~0.7.1",
+    "bootstrap": "~3.2.0"
+  }
+}
